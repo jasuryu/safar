@@ -1,13 +1,12 @@
 name: Laravel on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ] jobs:
+    branches: 
+      - main 
+  
   create_deployment_artifacts:
     name: Create deploymnet artifacts
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
+    
     - name: Configure PHP 7.4
       use: shivammathur/setup-php@master
       with:
